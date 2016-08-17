@@ -52,3 +52,42 @@ unregisterReceiver(networkChange);
 
             }
 ```
+发送有序广播
+
+``` stylus
+//发送有序广播
+ sendOrderedBroadcast(intent,null);
+```
+第一个是intent 第二个是和intent相关的权限
+
+截断广播
+- 在接收器的代码处截断广播
+
+``` stylus
+ abortBroadcast();
+```
+
+本地广播 
+
+注册本地广播和获取实例
+
+``` stylus
+//获取本地广播管理器
+localBroadcastManager = LocalBroadcastManager.getInstance(this);
+
+localReceiver = new LocalReceiver();
+IntentFilter intentFilter1 = new IntentFilter();
+intentFilter1.addAction("com.localReceiver");
+
+//注册本地广播
+localBroadcastManager.registerReceiver(localReceiver,intentFilter1);
+
+```
+
+发送本地广播
+
+``` stylus
+Intent intent = new Intent("com.localReceiver");
+
+localBroadcastManager.sendBroadcast(intent);
+```
