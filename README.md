@@ -4,6 +4,8 @@
 # 注意
 此项目需要注意的是注意添加权限
 
+# 演示
+![yanshi](https://github.com/tuionf/BroadcastTest/blob/master/111.gif)
 # 笔记
 广播分为两类
 
